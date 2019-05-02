@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+const names = ["masha", "sophie", "elijah", "ivan"];
 
 app.set("view engine", "pug");
 
@@ -10,7 +10,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cards", (req, res) => {
-  res.render("card", { prompt: "Who is burried in Grant's tumb?", colors });
+  res.render("card", { prompt: "Who is burried in Grant's tumb?" });
+});
+
+app.get("/sandbox", (req, res) => {
+  res.render("sandbox", { names });
 });
 
 app.listen(3000, () => {

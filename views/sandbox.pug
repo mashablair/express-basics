@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title Flash Cards
+  body  
+    header
+      h1 Sandbox
+    
+    section#content
+      ul
+        each name in names 
+          li= name
+
+
+      table
+        thead
+          tr
+            each name in names
+              th= name
