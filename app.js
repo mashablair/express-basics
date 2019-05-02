@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/cards", (req, res) => {
-  res.render("card", { prompt: "Who is burried in the Grant's tumb?" });
+  res.render("card", { prompt: "Who is burried in Grant's tumb?", hint: "Think whose tomb it is." });
 });
 
 app.listen(3000, () => {
